@@ -1,11 +1,5 @@
 # CarRent
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-
 ## Big Picture
 ### Context
 - Was soll gebaut werden?
