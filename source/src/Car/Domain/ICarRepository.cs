@@ -7,6 +7,6 @@ namespace CarRent.Car.Domain
 
         Car GetByNumber(string carNumber);
 
-        Car GetAll();
+        IEnumerable<Car> GetAll();
     }
 }

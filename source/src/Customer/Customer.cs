@@ -2,8 +2,6 @@
 {
     public class Customer
     {
-
-
         public Guid Id { get; }
 
         public string PassportNumber { get; }

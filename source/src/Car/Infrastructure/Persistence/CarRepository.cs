@@ -37,10 +37,16 @@ namespace CarRent.Car.Infrastructure.Persistence
 
         public Car GetByNumber(string carNumber)
         {
-            IQueryable<Car> cars;
             var car = _carContext.Cars.Where(x => x.Equals(carNumber))
                 .Select(x =>x).First();
             return car;
+        }
+
+        public IEnumerable<Car> GetAll()
+        {
+           return _carContext.Cars.ToList();
+            
+
         }
     }
 }
