@@ -24,12 +24,16 @@
         {
             CarId = car.Id;
             CarNumber = car.CarNumber;
-            Brand = car.Brand.BrandName;
-            CarClass = car.CarClass.CarClassName;
-            Type = car.Type.TypeName;
+            Brand = car.Brand.Id.ToString();
+            Type = car.Type.Id.ToString();
+            CarClass = car.CarClass.Id.ToString();
 
         }
-        
+
+        public CarResponseDto()
+        {
+
+        }
 
     }
 }

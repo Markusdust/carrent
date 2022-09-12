@@ -5,7 +5,11 @@ namespace CarRent.Car.Domain
 {
     public class Car :Entity , IAggregateRoot
     {
-        
+        public Car(Guid id) : base(id)
+        {
+
+        }
+
         public string CarNumber { get; set; }
 
         public CarClass CarClass { get; set; }
@@ -14,7 +18,7 @@ namespace CarRent.Car.Domain
 
         public Type Type { get; set; }
 
-        public Car(CarResponseDto carResponseDto) :base(carResponseDto.CarId)
+        public Car(CarResponseDto carResponseDto)  :base(carResponseDto.CarId)
         {
             CarNumber = carResponseDto.CarNumber;
             Brand = new Brand(new Guid(carResponseDto.Brand));

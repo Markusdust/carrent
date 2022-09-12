@@ -13,7 +13,7 @@
             Id = id;
         }
 
-        public Guid Id { get; }
+        public Guid Id { get; set; }
 
         public override bool Equals(object? obj)
         {
