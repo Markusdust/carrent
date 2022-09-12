@@ -39,6 +39,7 @@ Das CarRent Projekt wurde von Markus Staub und Andy Steingruber erstellt und am 
 ## Domain Model
 ![](2022-09-11-21-41-23.png)
 
+
 ## Use Cases
 ### Kunden Automiete
 - Actors: Kunde
