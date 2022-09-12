@@ -1,4 +1,5 @@
 # CarRent
+Das CarRent Projekt wurde von Markus Staub und Andy Steingruber erstellt und am 13.09.2022 online abgegeben.
 
 ## Big Picture
 ### Context
