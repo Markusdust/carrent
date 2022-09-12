@@ -18,9 +18,7 @@
 
   <ItemGroup>
     <Folder Include="Car\Application\" />
-    <Folder Include="Car\Persistence\" />
-    <Folder Include="Customer\" />
-    <Folder Include="Rent\" />
+    <Folder Include="Rent\Domain\" />
   </ItemGroup>
 
 </Project>

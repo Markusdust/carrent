@@ -20,7 +20,15 @@
         [JsonPropertyOrder(500)]
         public string Type { get; set; }
 
+        public CarResponseDto(Domain.Car car)
+        {
+            CarId = car.Id;
+            CarNumber = car.CarNumber;
+            Brand = car.Brand.BrandName;
+            CarClass = car.CarClass.CarClassName;
+            Type = car.Type.TypeName;
 
+        }
         
 
     }
