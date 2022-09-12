@@ -17,16 +17,19 @@ namespace CarRent.Car.Infrastructure.Persistence
         public void Add(Car car)
         {
             _carContext.Cars.Add(car);
+            _carContext.SaveChanges();
         }
 
         public void Update(Car car)
         {
             _carContext.Cars.Update(car);
+            _carContext.SaveChanges();
         }
 
         public void Remove(Car car)
         {
             _carContext.Cars.Remove(car);
+            _carContext.SaveChanges();
         }
 
         public Car GetById(Guid Id)
@@ -45,8 +48,6 @@ namespace CarRent.Car.Infrastructure.Persistence
         public IEnumerable<Car> GetAll()
         {
            return _carContext.Cars.ToList();
-            
-
         }
     }
 }

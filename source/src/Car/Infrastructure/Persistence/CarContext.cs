@@ -4,7 +4,7 @@
 namespace CarRent.Car.Infrastructure.Persistence
 {
     using CarRent.Car.Domain;
-    using CarRent.Customer;
+    using CarRent.Customer.Domain;
 
     public class CarContext : DbContext
     {
