@@ -8,10 +8,14 @@ namespace CarRent.Customer.Infrastructure.Persistence
     {
         public DbSet<Customer> Customers { get; set; }
 
-        public CustomerContext(DbContextOptions options) : base(options) { }
+        public CustomerContext(DbContextOptions options) : base(options)
+        {
+            Database.EnsureCreated();
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.HasDefaultSchema("Customer");
             modelBuilder.Entity<Customer>(
                 x =>
                 {

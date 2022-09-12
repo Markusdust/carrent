@@ -15,11 +15,11 @@ namespace CarRent.Tests
         [Fact]
         public void CarDomain()
         {
-            var car1 = new Car();
-            var car2 = new Car();
+            //var car1 = new Car();
+            //var car2 = new Car();
 
-            car1.Equals(car2);
-            var result = car1 == car2;
+            //car1.Equals(car2);
+            //var result = car1 == car2;
 
         }
 
@@ -27,13 +27,13 @@ namespace CarRent.Tests
         [Fact]
         public void Foo()
         {
-            var g = new MyGraph();
-            g.MyEvent += G_MyEvent;
-            g.MyEvent += G_MyEvent;
-            g.Foo();
+            //var g = new MyGraph();
+            //g.MyEvent += G_MyEvent;
+            //g.MyEvent += G_MyEvent;
+            //g.Foo();
 
-            var carClass = new CarClass();
-            var x = new Car();
+            //var carClass = new CarClass();
+            //var x = new Car();
         }
 
         private void G_MyEvent()

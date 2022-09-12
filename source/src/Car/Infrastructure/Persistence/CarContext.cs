@@ -16,7 +16,10 @@ namespace CarRent.Car.Infrastructure.Persistence
         public DbSet<Customer> Customers { get; set; }
 
 
-        public CarContext(DbContextOptions options) : base(options) { }
+        public CarContext(DbContextOptions options) : base(options)
+        {
+            Database.EnsureCreated();
+        }
 
         //string connectionString = "Server=(localdb)\\mssqllocaldb;Database=CarRent;Trusted_Connection=True;MultipleActiveResultSets=true";
 
@@ -27,6 +30,8 @@ namespace CarRent.Car.Infrastructure.Persistence
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.HasDefaultSchema("Car");
+
             modelBuilder.Entity<Car>(
                 x =>
                 {

@@ -1,4 +1,5 @@
 ﻿using CarRent.Common.Domain;
+using CarRent.Customer.Api.v1;
 
 namespace CarRent.Customer.Domain
 {
@@ -20,6 +21,16 @@ namespace CarRent.Customer.Domain
         public string City { get; set; }
 
         public string Country { get; set; }
+
+        public Customer(CustomerResponseDto customerResponseDto) : base(customerResponseDto.CustomerId)
+        {
+            PassportNumber = customerResponseDto.PassportNumber;
+            Firstname = customerResponseDto.Firstname;
+            Lastname = customerResponseDto.Lastname;
+            Street = customerResponseDto.Street;
+            City = customerResponseDto.City;
+            Country = customerResponseDto.Country;
+        }
 
     }
 }
