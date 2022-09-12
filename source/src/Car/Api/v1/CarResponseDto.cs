@@ -25,8 +25,8 @@
             CarId = car.Id;
             CarNumber = car.CarNumber;
             Brand = car.Brand.Id.ToString();
-            Type = car.Type.Id.ToString();
-            CarClass = car.CarClass.Id.ToString();
+            Type = car.Type.Id.ToString(); ;
+            CarClass = car.CarClass.Id.ToString(); ;
 
         }
 

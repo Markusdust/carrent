@@ -18,7 +18,6 @@
 
   <ItemGroup>
     <Folder Include="Car\Application\" />
-    <Folder Include="Rent\Api\v1\" />
     <Folder Include="Rent\Infrastructure\Persistence\" />
   </ItemGroup>
 
