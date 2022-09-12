@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CarRent.Car.Domain;
+using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -8,6 +9,23 @@ namespace CarRent.Car.Api.v1
     [ApiController]
     public class CarController : ControllerBase
     {
+        private readonly ICarRepository _repository;
+
+        public CarController(ICarRepository repository)
+        {
+            _repository = repository;
+        }
+
+        //[HttpGet]
+        //public IActionResult Get()
+        //{
+        //    var cars = _repository.GetAll();
+        //    var CarDtos = cars.Select()
+
+        //}
+
+
+
         // GET: api/<CarController>
         [HttpGet]
         public IEnumerable<CarResponseDto> Get()

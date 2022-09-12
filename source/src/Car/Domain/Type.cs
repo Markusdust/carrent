@@ -1,7 +1,7 @@
 ﻿namespace CarRent.Car.Domain
 {
-    public class Type
+    public class Type : Entity
     {
-        public Guid Id { get;}
+        public string TypeName { get;}
     }
 }
