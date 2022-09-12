@@ -16,10 +16,20 @@ namespace CarRent.Car.Infrastructure.Persistence
         public DbSet<Customer> Customers { get; set; }
 
 
+        public CarContext(DbContextOptions options) : base(options) { }
+
+        //string connectionString = "Server=(localdb)\\mssqllocaldb;Database=CarRent;Trusted_Connection=True;MultipleActiveResultSets=true";
+
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlServer(connectionString);
+        //}
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Car>(
-                x => {
+                x =>
+                {
                     x.HasKey(y => y.Id);
                     x.HasIndex(y => y.CarNumber);
                     x.HasOne(y => y.CarClass);
@@ -29,19 +39,29 @@ namespace CarRent.Car.Infrastructure.Persistence
             );
 
             modelBuilder.Entity<CarClass>(
-                x => {
+                x =>
+                {
                     x.HasKey(y => y.Id);
                 }
             );
 
             modelBuilder.Entity<Brand>(
-                x => {
+                x =>
+                {
                     x.HasKey(y => y.Id);
                 }
             );
 
             modelBuilder.Entity<Type>(
-                x => {
+                x =>
+                {
+                    x.HasKey(y => y.Id);
+                }
+            );
+
+            modelBuilder.Entity<Customer>(
+                x =>
+                {
                     x.HasKey(y => y.Id);
                 }
             );

@@ -11,13 +11,13 @@
         public string Lastname { get; }
 
 
-        public Customer(Guid Id, string passportNumber, string firstname,
-                                                        string lastname)
-        {
-            this.Id = Id;
-            this.PassportNumber = passportNumber;
-            this.Firstname = firstname;
-            this.Lastname = lastname;
-        }
+        //public Customer(Guid Id, string passportNumber, string firstname,
+        //                                                string lastname)
+        //{
+        //    this.Id = Id;
+        //    this.PassportNumber = passportNumber;
+        //    this.Firstname = firstname;
+        //    this.Lastname = lastname;
+        //}
     }
 }

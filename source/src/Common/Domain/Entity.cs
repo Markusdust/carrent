@@ -1,59 +1,63 @@
-﻿public abstract class Entity
+﻿namespace CarRent.Common.Domain
 {
-    protected Entity()
-        : this(Guid.NewGuid())
-    {
-    }
 
-    internal Entity(Guid id)
+    public abstract class Entity
     {
-        Id = id;
-    }
-
-    public Guid Id { get; }
-
-    public override bool Equals(object? obj)
-    {
-        if (obj == null || obj is not Entity)
+        protected Entity()
+            : this(Guid.NewGuid())
         {
-            return false;
         }
 
-        if (ReferenceEquals(this, obj))
+        internal Entity(Guid id)
         {
-            return true;
+            Id = id;
         }
 
-        if (GetType() != obj.GetType())
+        public Guid Id { get; }
+
+        public override bool Equals(object? obj)
         {
-            return false;
+            if (obj == null || obj is not Entity)
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+
+            if (GetType() != obj.GetType())
+            {
+                return false;
+            }
+
+            Entity item = (Entity) obj;
+
+            return item.Id == Id;
         }
 
-        Entity item = (Entity)obj;
-
-        return item.Id == Id;
-    }
-
-    public override int GetHashCode()
-    {
-        return HashCode.Combine(Id);
-    }
-
-    public static bool operator ==(Entity left, Entity right)
-    {
-        if (Equals(left, null))
+        public override int GetHashCode()
         {
-            return (Equals(right, null)) ? true : false;
+            return HashCode.Combine(Id);
         }
-        else
+
+        public static bool operator ==(Entity left, Entity right)
         {
-            return left.Equals(right);
+            if (Equals(left, null))
+            {
+                return (Equals(right, null)) ? true : false;
+            }
+            else
+            {
+                return left.Equals(right);
+            }
         }
-    }
 
-    public static bool operator !=(Entity left, Entity right)
-    {
-        return !(left == right);
-    }
+        public static bool operator !=(Entity left, Entity right)
+        {
+            return !(left == right);
+        }
 
+    }
 }
