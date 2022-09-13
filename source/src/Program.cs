@@ -12,7 +12,7 @@ builder.Services.AddControllers();
 
 var connectionString = "Server=(localdb)\\mssqllocaldb;Database=CarRent;Trusted_Connection=True;MultipleActiveResultSets=true";
 builder.Services.AddDbContext<CarContext>(x => x.UseSqlServer(connectionString));
-builder.Services.AddDbContext<CustomerContext>(x => x.UseSqlServer(connectionString));
+//builder.Services.AddDbContext<CustomerContext>(x => x.UseSqlServer(connectionString));
 
 
 

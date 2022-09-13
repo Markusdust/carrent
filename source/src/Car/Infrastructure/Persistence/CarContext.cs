@@ -36,7 +36,7 @@ namespace CarRent.Car.Infrastructure.Persistence
                 x =>
                 {
                     x.HasKey(y => y.Id);
-                    x.HasIndex(y => y.CarNumber);
+                    //x.Property(y => y.CarNumber);
                     x.HasOne(y => y.CarClass);
                     x.HasOne(y => y.Brand);
                     x.HasOne(y => y.Type);

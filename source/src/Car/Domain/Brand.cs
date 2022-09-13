@@ -9,7 +9,7 @@ namespace CarRent.Car.Domain
 
         }
 
-        public string BrandName { get;}
+       // public string BrandName { get;}
 
     }
 }

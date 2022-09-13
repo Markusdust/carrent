@@ -10,7 +10,8 @@ namespace CarRent.Car.Domain
 
         }
 
-        public string CarNumber { get; set; }
+        
+        //public string CarNumber { get; set; }
 
         public CarClass CarClass { get; set; }
 
@@ -20,14 +21,14 @@ namespace CarRent.Car.Domain
 
         public Car(CarResponseDto carResponseDto)  :base(carResponseDto.CarId)
         {
-            CarNumber = carResponseDto.CarNumber;
+            //CarNumber = carResponseDto.CarNumber;
             Brand = new Brand(new Guid(carResponseDto.Brand));
             Type = new Type(new Guid(carResponseDto.Type));
             CarClass = new CarClass(new Guid(carResponseDto.CarClass));
 
         }
 
-
+        
 
     }
 }

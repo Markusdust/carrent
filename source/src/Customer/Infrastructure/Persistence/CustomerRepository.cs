@@ -1,6 +1,4 @@
 ﻿
-
-
 namespace CarRent.Customer.Infrastructure.Persistence
 {
     using CarRent.Car.Infrastructure.Persistence;
