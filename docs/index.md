@@ -3,6 +3,18 @@ Das CarRent Projekt wurde von Markus Staub und Andy Steingruber erstellt und am 
 
 ## Big Picture
 ### Context
+![](2022-09-13-21-21-14.png)
+
+1. User
+    - Reservationen erstellen
+    - Autoklasse auswählen
+    - Anzahl Tage der Reservation festlegen
+
+2. Employee
+    - Kunde verwalten (erfassen, bearbeiten, löschen, suchen)
+        - Name, Adresse, Kundennummer
+    - Autos verwalten und suchen (erfassen, bearbeiten, löschen, suchen)
+
 - Was soll gebaut werden?
     - Es geht darum, ein neues Auto vermietungssystem «Carrent» zu erstellen.
 
@@ -38,7 +50,6 @@ Das CarRent Projekt wurde von Markus Staub und Andy Steingruber erstellt und am 
 
 ## Domain Model
 ![](2022-09-11-21-41-23.png)
-
 
 ## Use Cases
 ### Kunden Automiete
